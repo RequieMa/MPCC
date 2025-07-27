@@ -1,6 +1,4 @@
-# Newtonian Mechanics
-
-## Newton's Three Laws
+# Newton's Three Laws
 
 1. If an object is not exerted an external force, it will stay static or move with constant speed in a striaght line
 2. Resultant force is the rate of change of momentum 
