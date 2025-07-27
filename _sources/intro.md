@@ -1,11 +1,13 @@
-# Welcome to your Jupyter Book
+# Welcome to MPCC
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+A collection of Maths, Physics and Computer Science topics which are important to Cybernetics.
 
-Check out the content pages bundled with this sample book to see more.
+Cybernetics, an idea originated from Wiener, is almost a dead topic and separated into more specific topics like control theory, random process, AI, bioinformatics, etc. Although each domain flurishes, it lacks a holitic persective that are important nowadays. 
 
-```{tableofcontents}
+However, if we look back to Wiener's Cybernetics or Tisen's Engineering Cybernetics, it is easy to feel disconnected in either philosophy or methodology. Therefore, a revisit of Maths, Physics, and Computer Science that have been developed so far is required. Then, make a connection back to their idea to re-form the totality of Maths, Physics, Computer Science and Cybernetics (namely, MPCC).
+
 ```
+{tableofcontents}
+```
+
+Note: The book is under development...
