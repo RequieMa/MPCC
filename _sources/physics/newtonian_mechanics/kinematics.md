@@ -1,5 +1,6 @@
 # Kinematics
 
+# Time and Position
 There are two physical quantities that cannot actually be defined in physics: Position and Time. 
 
 **Time**, $t$, is the most ill-defined physical quantity. We all assumed that we know what it is when we talked about time. However, we can only imagine the 'tick-tock' of a mechanical clock, not a conceptual definition of it. Some philosophers argues that our imagination of time comes from how understanding of 3D world where the perception of "distance" is vivid. Some go the other way around, like Kant. They think that our interest of "quantify distance" into some kinds of scale is from time as time is ticking all the time. The sensation of time is from the awareness of death which is the ultimate end. Nevertheless, in Physic, we only talk about the measurement of time, the different rate of time in different perspective or reference (in Relativity), sometimes the origin of time. Not time itself. We end our discussion of time with a quotation from Saint Augustine:
@@ -7,8 +8,9 @@ There are two physical quantities that cannot actually be defined in physics: Po
 I know what it is, but when you ask me I don’t.
 ```
 
-The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the "origin" we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a **coordinate system**, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use **displacement** instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.
+The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the "origin" we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a **Coordinate System**, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use **displacement** instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.
 
+# Linear Displacement
 Given an origin, $O$, and some basis vectors (for Physics, normally in 3D) such that any position of objects, $A$ and $B$ can be written as 
 ```{math}
 \begin{eqnarray*}
@@ -18,7 +20,7 @@ Given an origin, $O$, and some basis vectors (for Physics, normally in 3D) such 
 \end{eqnarray*}
 ``` 
 
-The relative position or **displacement** in Physics is hence defined as
+The relative position or **Linear Displacement** in Physics is hence defined as
 ```{math}
 \begin{eqnarray*}
     \vec {AB} ~ &=& ~ \vec {OB} - \vec {OA}\\
@@ -36,14 +38,14 @@ For convinence, the two form of vector notation is interchangeable in Physics
 ``` 
 The only difference is that the second one explicitly writes down the basis vector so that you know what kind of coordinate system we are using, the first one does not so it can be on other types of coordinate systems like a spherical polar coorinates. Without explicitly specifying, we assume the first one is using a Cartesian coordinate.
 
-# Definitions of Velocity and Acceleration
-**Velocity** of a particle is **the rate of change of displacement**
+# Linear Velocity and Linear Acceleration
+**Linear Velocity** of a particle is **the rate of change of linear displacement**
 
 $$
 \vec v ~=~ \frac{d \vec r}{dt}
 $$
 
-**Acceleration** of a particle is **the rate of change of velocity**
+**Linear Acceleration** of a particle is **the rate of change of linear velocity**
 
 $$
 \vec a ~=~ \frac{d \vec v}{dt} = \frac{d^2 \vec r}{dt^2}
@@ -130,7 +132,7 @@ $$
 \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \omega \hat{e_\theta}
 $$
 
-where $\omega = \frac{d \theta}{dt}$ is the **angular velocity**, which is **the rate of change of angular displacement** (the angle). (More in this, especially the vector form of it, will be shown later)
+where $\omega = \frac{d \theta}{dt}$ is the **Angular Velocity**, which is **the rate of change of Angular Displacement** (the angle). (More in this, especially the vector form of it, will be shown later)
 
 Similarly, 
 ```{math}
@@ -156,4 +158,4 @@ $$
 \Rightarrow \vec a ~=~ \left(\frac{d^2 r}{dt^2} - r \omega^2 \right) \hat{e_r} + \left(r \alpha + 2 \frac{dr}{dt} \omega \right) \hat{e_\theta} \\
 $$
 
-where $\alpha = \frac{d\omega}{dt}$ is the **angular acceleration**, which is **the rate of change of angular velocity**.
+where $\alpha = \frac{d\omega}{dt}$ is the **Angular Acceleration**, which is **the rate of change of angular velocity**.

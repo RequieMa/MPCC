@@ -402,7 +402,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Kinematics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-of-velocity-and-acceleration">Definitions of Velocity and Acceleration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-position">Time and Position</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-displacement">Linear Displacement</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-velocity-and-linear-acceleration">Linear Velocity and Linear Acceleration</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-on-2d-coordinate-systems">Velocity and Acceleration on 2D Coordinate Systems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-caresian-coordinate">In Caresian Coordinate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-polar-coordinate">In Polar Coordinate</a></li>
@@ -422,12 +424,18 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="kinematics">
 <h1>Kinematics<a class="headerlink" href="#kinematics" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="time-and-position">
+<h1>Time and Position<a class="headerlink" href="#time-and-position" title="Link to this heading">#</a></h1>
 <p>There are two physical quantities that cannot actually be defined in physics: Position and Time.</p>
 <p><strong>Time</strong>, <span class="math notranslate nohighlight">\(t\)</span>, is the most ill-defined physical quantity. We all assumed that we know what it is when we talked about time. However, we can only imagine the ‘tick-tock’ of a mechanical clock, not a conceptual definition of it. Some philosophers argues that our imagination of time comes from how understanding of 3D world where the perception of “distance” is vivid. Some go the other way around, like Kant. They think that our interest of “quantify distance” into some kinds of scale is from time as time is ticking all the time. The sensation of time is from the awareness of death which is the ultimate end. Nevertheless, in Physic, we only talk about the measurement of time, the different rate of time in different perspective or reference (in Relativity), sometimes the origin of time. Not time itself. We end our discussion of time with a quotation from Saint Augustine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>I know what it is, but when you ask me I don’t.
 </pre></div>
 </div>
-<p>The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the “origin” we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a <strong>coordinate system</strong>, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use <strong>displacement</strong> instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.</p>
+<p>The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the “origin” we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a <strong>Coordinate System</strong>, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use <strong>displacement</strong> instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="linear-displacement">
+<h1>Linear Displacement<a class="headerlink" href="#linear-displacement" title="Link to this heading">#</a></h1>
 <p>Given an origin, <span class="math notranslate nohighlight">\(O\)</span>, and some basis vectors (for Physics, normally in 3D) such that any position of objects, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
@@ -435,7 +443,7 @@ document.write(`
     \vec {OA} ~ &amp;=&amp; ~ \begin{pmatrix}a_i \\ a_j \\ a_k\end{pmatrix}\\
     \vec {OB} ~ &amp;=&amp; ~ \begin{pmatrix}b_i \\ b_j \\ b_k\end{pmatrix}\\
 \end{eqnarray*}\end{split}\]</div>
-<p>The relative position or <strong>displacement</strong> in Physics is hence defined as</p>
+<p>The relative position or <strong>Linear Displacement</strong> in Physics is hence defined as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
     \vec {AB} ~ &amp;=&amp; ~ \vec {OB} - \vec {OA}\\
@@ -450,14 +458,14 @@ document.write(`
 \end{eqnarray*}\end{split}\]</div>
 <p>The only difference is that the second one explicitly writes down the basis vector so that you know what kind of coordinate system we are using, the first one does not so it can be on other types of coordinate systems like a spherical polar coorinates. Without explicitly specifying, we assume the first one is using a Cartesian coordinate.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="definitions-of-velocity-and-acceleration">
-<h1>Definitions of Velocity and Acceleration<a class="headerlink" href="#definitions-of-velocity-and-acceleration" title="Link to this heading">#</a></h1>
-<p><strong>Velocity</strong> of a particle is <strong>the rate of change of displacement</strong></p>
+<section class="tex2jax_ignore mathjax_ignore" id="linear-velocity-and-linear-acceleration">
+<h1>Linear Velocity and Linear Acceleration<a class="headerlink" href="#linear-velocity-and-linear-acceleration" title="Link to this heading">#</a></h1>
+<p><strong>Linear Velocity</strong> of a particle is <strong>the rate of change of linear displacement</strong></p>
 <div class="math notranslate nohighlight">
 \[
 \vec v ~=~ \frac{d \vec r}{dt}
 \]</div>
-<p><strong>Acceleration</strong> of a particle is <strong>the rate of change of velocity</strong></p>
+<p><strong>Linear Acceleration</strong> of a particle is <strong>the rate of change of linear velocity</strong></p>
 <div class="math notranslate nohighlight">
 \[
 \vec a ~=~ \frac{d \vec v}{dt} = \frac{d^2 \vec r}{dt^2}
@@ -534,7 +542,7 @@ document.write(`
 \[
 \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \omega \hat{e_\theta}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\omega = \frac{d \theta}{dt}\)</span> is the <strong>angular velocity</strong>, which is <strong>the rate of change of angular displacement</strong> (the angle). (More in this, especially the vector form of it, will be shown later)</p>
+<p>where <span class="math notranslate nohighlight">\(\omega = \frac{d \theta}{dt}\)</span> is the <strong>Angular Velocity</strong>, which is <strong>the rate of change of Angular Displacement</strong> (the angle). (More in this, especially the vector form of it, will be shown later)</p>
 <p>Similarly,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
@@ -555,7 +563,7 @@ document.write(`
 \[\begin{split}
 \Rightarrow \vec a ~=~ \left(\frac{d^2 r}{dt^2} - r \omega^2 \right) \hat{e_r} + \left(r \alpha + 2 \frac{dr}{dt} \omega \right) \hat{e_\theta} \\
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha = \frac{d\omega}{dt}\)</span> is the <strong>angular acceleration</strong>, which is <strong>the rate of change of angular velocity</strong>.</p>
+<p>where <span class="math notranslate nohighlight">\(\alpha = \frac{d\omega}{dt}\)</span> is the <strong>Angular Acceleration</strong>, which is <strong>the rate of change of angular velocity</strong>.</p>
 </section>
 </section>
 
@@ -624,7 +632,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Kinematics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-of-velocity-and-acceleration">Definitions of Velocity and Acceleration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-position">Time and Position</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-displacement">Linear Displacement</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-velocity-and-linear-acceleration">Linear Velocity and Linear Acceleration</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-on-2d-coordinate-systems">Velocity and Acceleration on 2D Coordinate Systems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-caresian-coordinate">In Caresian Coordinate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-polar-coordinate">In Polar Coordinate</a></li>

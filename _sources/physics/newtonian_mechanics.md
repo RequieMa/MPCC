@@ -5,15 +5,27 @@
 [book](https://smarosa.wordpress.com/wp-content/uploads/2018/10/kleppner-kolenkow-introduction-to-mechanics.pdf)
 
 1. [Linear Kinematics](./newtonian_mechanics/kinematics)
+   - Time and Position
+   - Linear Displacement
+   - Linear Velocity, Linear Acceleration
+   - Velocity and Acceleration in 2D Coordinate Systems
+2. [Linear Dynamics](./newtonian_mechanics/linear_dynamics)
+   - Newton's Laws of Motion
+   - Linear Momentum
+   - Conservation of Linear Momentum
+   - Newton 3rd Law From Newton 1st and 2nd Law
 
-2. Newton's Laws
-3. Momentum
+3. [Angular Dynamics](./newtonian_mechanics/angular_dynamics)
+   - Angular Momentum
+   - Torque
+   - Conservation of Angular Momentum
+
 4. Collisions I
 5. Rocket motion
 6. Energy
 7. Potential Energy
-8. Conservation of Energy
-9. Collisions II
+8.  Conservation of Energy
+9.  Collisions II
 10. Fixed Axis Rotation
 11. Moment of Inertia
 12. Rotational and Translational Motion

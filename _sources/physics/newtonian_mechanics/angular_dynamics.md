@@ -2,9 +2,11 @@
 
 # Angular Momentum
 The angular momentum of an object is defined as 
+
 $$
 \vec L ~=~ \vec r \times \vec p\\
 $$
+
 where $\vec r$ is the displacement of the object from **pivot**, and $\vec p$ is the linear momentum.
 
 The direction of angular momentum is the axis of rotation which is perpendicular to the rotation plane.
@@ -26,6 +28,7 @@ since $\vec p = m \vec v$ which is parallel with $\vec v$, $\Rightarrow \vec v \
 $$
 \vec \tau = \frac{d \vec L}{dt} ~=~ \vec r \times \vec F\\
 $$
+
 where $\vec \tau$ is the **torque** (the vector form of **moment**).
 
 Again, we can say the definition of torque is **the rate of change of angular momentum, given a pivot**.
@@ -36,7 +39,9 @@ Similarly to the Linear Momentum, in a **closed system**, the total angular mome
 Consider $N$ particles in a system, the total angular momentum is $\sum_k^N \vec L_k$, where $\vec L_k$ refers as the angular momentum of a single particle. 
 
 Then the conservation of angular momentum can be written as 
+
 $$
 \sum_k^N (\vec L_k)_i ~=~ \sum_k^N (\vec L_k)_f
 $$
+
 where $(\vec L_k)_i$ and $(\vec L_k)_f$ denote the initial and final angular momentum of the particle repectively.

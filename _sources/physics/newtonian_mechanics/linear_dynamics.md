@@ -4,9 +4,11 @@
 
 1. A particle remains at rest or moves in a straight line with constant speed if there is no resultant force acting on it.
 2. Resultant force is the rate of change of momentum 
+   
 $$
 \vec F ~=~ \frac{d \vec p}{dt}\\
 $$
+
 3. For any action, there is a reaction (equal in magnitude, opposite in direction, and collinear)
 
 Our current form of Newton second law was written by Euler.
@@ -19,7 +21,8 @@ There is an implicit condition of Newton's laws: They have to be applied under a
 
 Absolute inertial frame where Neton 1st law holds is an idealized situation.
 
-## Linear Momentum
+# Linear Momentum
+
 $\vec p$ is the linear momentum, 
 
 $$
@@ -51,9 +54,11 @@ By closed system, we refer as the system of objects do not interact with externa
 Consider $N$ particles in a system, the total momentum is refered as $\sum_k^N \vec p_k$, where $\vec p_k$ refers as the momentum of a single particle. 
 
 Then the conservation of linear momentum can be written as 
+
 $$
 \sum_k^N (\vec p_k)_i ~=~ \sum_k^N (\vec p_k)_f
 $$
+
 where $(\vec p_k)_i$ and $(\vec p_k)_f$ denote the initial and final linear momentum of the particle repectively.
 
 ## Newton 3nd Law from 1st and 2nd

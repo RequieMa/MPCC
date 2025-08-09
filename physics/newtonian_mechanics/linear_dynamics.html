@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/newtonian_mechanics/linear_dynamics';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Electricity &amp; Magnetism" href="../em.html" />
     <link rel="prev" title="Kinematics" href="kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,6 +188,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../newtonian_mechanics.html">Newtonian Mechanics</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../em.html">Electricity &amp; Magnetism</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
@@ -399,8 +402,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear Dynamics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-linear-momentum">Conservation of Linear Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-3nd-law-from-1st-and-2nd">Newton 3nd Law from 1st and 2nd</a></li>
 </ul>
@@ -424,10 +427,13 @@ document.write(`
 <h1>Newton’s Three Laws<a class="headerlink" href="#newton-s-three-laws" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>A particle remains at rest or moves in a straight line with constant speed if there is no resultant force acting on it.</p></li>
-<li><p>Resultant force is the rate of change of momentum
-$<span class="math notranslate nohighlight">\(
+<li><p>Resultant force is the rate of change of momentum</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \vec F ~=~ \frac{d \vec p}{dt}\\
-\)</span>$</p></li>
+\end{split}\]</div>
+<ol class="arabic simple" start="3">
 <li><p>For any action, there is a reaction (equal in magnitude, opposite in direction, and collinear)</p></li>
 </ol>
 <p>Our current form of Newton second law was written by Euler.</p>
@@ -435,8 +441,9 @@ $<span class="math notranslate nohighlight">\(
 <p>Mass, <span class="math notranslate nohighlight">\(m\)</span>, is described as a <strong>physical property</strong> which reflects the ability to resist changing in velocity, known as <strong>inertial mass</strong>.</p>
 <p>There is an implicit condition of Newton’s laws: They have to be applied under an <strong>inertial reference of frame</strong> (i.e. not a frame under acceleration or rotation). Otherwise, we will measure acceleration even if there is no external force. (e.g. Coriolis Effect)</p>
 <p>Absolute inertial frame where Neton 1st law holds is an idealized situation.</p>
-<section id="linear-momentum">
-<h2>Linear Momentum<a class="headerlink" href="#linear-momentum" title="Link to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="linear-momentum">
+<h1>Linear Momentum<a class="headerlink" href="#linear-momentum" title="Link to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\(\vec p\)</span> is the linear momentum,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -455,17 +462,17 @@ $<span class="math notranslate nohighlight">\(
 \[\begin{split}
 \vec F ~=~ m \vec a\\
 \end{split}\]</div>
-</section>
 <section id="conservation-of-linear-momentum">
 <h2>Conservation of Linear Momentum<a class="headerlink" href="#conservation-of-linear-momentum" title="Link to this heading">#</a></h2>
 <p>In a <strong>closed system</strong>, the total momentum is conserved.</p>
 <p>By closed system, we refer as the system of objects do not interact with external environment. (No external forces exerts on the system of objects).</p>
 <p>Consider <span class="math notranslate nohighlight">\(N\)</span> particles in a system, the total momentum is refered as <span class="math notranslate nohighlight">\(\sum_k^N \vec p_k\)</span>, where <span class="math notranslate nohighlight">\(\vec p_k\)</span> refers as the momentum of a single particle.</p>
-<p>Then the conservation of linear momentum can be written as
-$<span class="math notranslate nohighlight">\(
+<p>Then the conservation of linear momentum can be written as</p>
+<div class="math notranslate nohighlight">
+\[
 \sum_k^N (\vec p_k)_i ~=~ \sum_k^N (\vec p_k)_f
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>(\vec p_k)_i<span class="math notranslate nohighlight">\( and \)</span>(\vec p_k)_f$ denote the initial and final linear momentum of the particle repectively.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\((\vec p_k)_i\)</span> and <span class="math notranslate nohighlight">\((\vec p_k)_f\)</span> denote the initial and final linear momentum of the particle repectively.</p>
 </section>
 <section id="newton-3nd-law-from-1st-and-2nd">
 <h2>Newton 3nd Law from 1st and 2nd<a class="headerlink" href="#newton-3nd-law-from-1st-and-2nd" title="Link to this heading">#</a></h2>
@@ -512,6 +519,15 @@ where \)</span>(\vec p_k)_i<span class="math notranslate nohighlight">\( and \)<
         <p class="prev-next-title">Kinematics</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../em.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Electricity &amp; Magnetism</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -529,8 +545,8 @@ where \)</span>(\vec p_k)_i<span class="math notranslate nohighlight">\( and \)<
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear Dynamics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-linear-momentum">Conservation of Linear Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-3nd-law-from-1st-and-2nd">Newton 3nd Law from 1st and 2nd</a></li>
 </ul>
