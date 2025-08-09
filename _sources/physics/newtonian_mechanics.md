@@ -4,25 +4,27 @@
 
 [book](https://smarosa.wordpress.com/wp-content/uploads/2018/10/kleppner-kolenkow-introduction-to-mechanics.pdf)
 
-1. Newton's Laws
-2. Momentum
-3. Collisions I
-4. Rocket motion
-5. Energy
-6. Potential Energy
-7. Conservation of Energy
-8. Collisions II
-9. Fixed Axis Rotation
-10. Moment of Inertia
-11. Rotational and Translational Motion
-12. Rigid Body Motion
-13. Gyroscopic Motion
-14. Cavendish Experiment
-15. Moment of Inertia Tensor
-16. Euler's Equations
-17. Accelerated and Rotating Reference Frames
-18. Central Force Motion and Kepler's Laws
-19. Relativity
+1. [Linear Kinematics](./newtonian_mechanics/kinematics)
+
+2. Newton's Laws
+3. Momentum
+4. Collisions I
+5. Rocket motion
+6. Energy
+7. Potential Energy
+8. Conservation of Energy
+9. Collisions II
+10. Fixed Axis Rotation
+11. Moment of Inertia
+12. Rotational and Translational Motion
+13. Rigid Body Motion
+14. Gyroscopic Motion
+15. Cavendish Experiment
+16. Moment of Inertia Tensor
+17. Euler's Equations
+18. Accelerated and Rotating Reference Frames
+19. Central Force Motion and Kepler's Laws
+20. Relativity
 
 # Engineering Mechanics
 [Book](https://api.pageplace.de/preview/DT0400.9781292088785_A26856513/preview-9781292088785_A26856513.pdf)
