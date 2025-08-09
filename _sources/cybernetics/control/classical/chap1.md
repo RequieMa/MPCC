@@ -22,23 +22,8 @@ Q: Why do we need control systems?
 4. They exist in nature 
 5. Lower cost, high efficiency, etc.
 
-Check Github Mermaid syntax
-```mermaid
-  info
-```
+
 ## Open-Loop Control
-```mermaid
-graph LR
-    n1["Signal Input, $y_d$"] --> n2["Controller (Actuator)"]
-    n2 --> n3["input, u"]
-    n3 --> n4["Plant"]
-    n4 --> n5["Output, y"]
-    n1@{ shape: text}
-    n2@{ shape: rect}
-    n3@{ shape: text}
-    n4@{ shape: rect}
-    n5@{ shape: text}
-```
 
 - Calibration is the key!
 - Can be sensitive to disturbances
