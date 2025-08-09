@@ -10,31 +10,41 @@ I know what it is, but when you ask me I don’t.
 The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the "origin" we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a **coordinate system**, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use **displacement** instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.
 
 Given an origin, $O$, and some basis vectors (for Physics, normally in 3D) such that any position of objects, $A$ and $B$ can be written as 
-$$
-\vec O ~=~ \begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\\
-\vec {OA} ~=~ \begin{pmatrix}a_i \\ a_j \\ a_k\end{pmatrix}\\
-\vec {OB} ~=~ \begin{pmatrix}b_i \\ b_j \\ b_k\end{pmatrix}
-$$ 
+```{math}
+\begin{eqnarray*}
+    \vec O ~ &=& ~ \begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\\
+    \vec {OA} ~ &=& ~ \begin{pmatrix}a_i \\ a_j \\ a_k\end{pmatrix}\\
+    \vec {OB} ~ &=& ~ \begin{pmatrix}b_i \\ b_j \\ b_k\end{pmatrix}\\
+\end{eqnarray*}
+``` 
 
 The relative position or **displacement** in Physics is hence defined as
-$$
-\vec {AB} ~=~ \vec {OB} - \vec {OA} ~=~ \begin{pmatrix}b_i - a_i \\ b_j - a_j \\ b_k - a_k\end{pmatrix}\\
-$$
+```{math}
+\begin{eqnarray*}
+    \vec {AB} ~ &=& ~ \vec {OB} - \vec {OA}\\
+    \, ~ &=& ~ \begin{pmatrix}b_i - a_i \\ b_j - a_j \\ b_k - a_k\end{pmatrix}\\
+\end{eqnarray*}
+``` 
 normally written as $\vec r$ and is a function of time $\vec r = \vec r(t)$
 
 For convinence, the two form of vector notation is interchangeable in Physics
-$$
-\vec r ~=~ \begin{pmatrix}x \\ y \\ z\end{pmatrix} = x \hat i + y \hat j + z \hat k
-$$
+```{math}
+\begin{eqnarray*}
+    \vec r ~ &=& ~ \begin{pmatrix}x \\ y \\ z\end{pmatrix}\\
+    \, ~ &=& ~ x \hat i + y \hat j + z \hat k\\
+\end{eqnarray*}
+``` 
 The only difference is that the second one explicitly writes down the basis vector so that you know what kind of coordinate system we are using, the first one does not so it can be on other types of coordinate systems like a spherical polar coorinates. Without explicitly specifying, we assume the first one is using a Cartesian coordinate.
 
 # Definitions of Velocity and Acceleration
 **Velocity** of a particle is **the rate of change of displacement**
+
 $$
-\vec v ~=~ \frac{d \vec r}{dt}\\
+\vec v ~=~ \frac{d \vec r}{dt}
 $$
 
 **Acceleration** of a particle is **the rate of change of velocity**
+
 $$
 \vec a ~=~ \frac{d \vec v}{dt} = \frac{d^2 \vec r}{dt^2}
 $$
@@ -45,33 +55,43 @@ If we are in 2D, there are two natural option of coordinate systems:
 2. a Polar coordinate, $(r, \theta)$, where $\theta$ is positive in anticlockwise direction $\theta \in (0, 2\pi)$
 
 ## In Caresian Coordinate
-$$
-\vec r ~=~ x \hat i + y \hat j\\
-\Rightarrow \vec v ~=~ \frac{d \vec r}{dt} ~=~ \frac{d}{dt}\left(x \hat i \right) + \frac{d}{dt}\left(y \hat j \right)\\
-$$
-
+```{math}
+\begin{eqnarray*}
+    \vec r ~ &=& ~ x \hat i + y \hat j\\
+    \Rightarrow \vec v ~ &=& ~ \frac{d \vec r}{dt}\\
+    \, ~ &=& ~ \frac{d}{dt}\left(x \hat i \right) + \frac{d}{dt}\left(y \hat j \right)\\
+\end{eqnarray*}
+``` 
 Using product rule, we have
+
 $$
 \Rightarrow \vec v ~=~ \frac{d x}{dt}\hat i + x \frac{d \hat i}{dt} + \frac{d y}{dt}\hat j + y \frac{d \hat j}{dt}\\
 $$
 
 Based on the geometry, we know that the direction of $\hat i$ and $\hat j$ does not change over time, hence the rate of change is zero.
+
 $$
 \Rightarrow \vec v ~=~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
 $$
 
 Similarly, 
-$$
-\vec v ~=~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
-\Rightarrow \vec a ~=~ \frac{d \vec v}{dt} ~=~ \frac{d^2 x}{dt^2}\hat i + \frac{d^2 y}{dt^2}\hat j\\
-$$
+```{math}
+\begin{eqnarray*}
+    \vec v ~ &=& ~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
+    \Rightarrow \vec a ~ &=& ~ \frac{d \vec v}{dt}\\
+    \, ~ &=& ~ \frac{d^2 x}{dt^2}\hat i + \frac{d^2 y}{dt^2}\hat j\\
+\end{eqnarray*}
+``` 
 
 ## In Polar Coordinate
 Taking velocity and acceleration in Cartesian coordinate is trivial. However, in Polar coordinate, we have to be careful of the changing direction.
+
 $$
 \vec r ~=~ r \hat{e_r}\\
 $$
+
 Here, $\hat{e_r}$ is the radial direction and it is a function of angle, i.e. $\hat{e_r} = \hat{e_r}(\theta)$.
+
 Then, 
 ```{math}
 \begin{eqnarray*}
@@ -80,14 +100,19 @@ Then,
     \, ~ &=& ~  \frac{dr}{dt} \hat{e_r} + r \frac{d \hat{e_r}(\theta)}{dt}\\
 \end{eqnarray*}
 ```
+
 For the second term, we need to apply chain rule
+
 $$
 \Rightarrow \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \frac{d \hat{e_r}(\theta)}{d \theta} \frac{d \theta}{dt}\\
 $$
+
 To get an idea of what $\frac{d \hat{e_r}(\theta)}{d \theta}$ is, we can first consider the relation between Polar and Caresian Coordinate. 
+
 $$
 \hat{e_r}(\theta) = \cos(\theta) \hat i + \sin(\theta) \hat j\\
 $$
+
 Obviously, $\hat i$ and $\hat j$ are not dependent on $\theta$, thus,
 ```{math}
 \begin{eqnarray*}
@@ -96,12 +121,15 @@ Obviously, $\hat i$ and $\hat j$ are not dependent on $\theta$, thus,
     \, ~ &=& ~ \hat{e_\theta}\\
 \end{eqnarray*}
 ```
+
 It is clear that it satisfies the orthogonality of basis vector such that $\hat{e_r} \cdot \hat{e_\theta} = 0$
 
 Therefore,
+
 $$
 \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \omega \hat{e_\theta}
 $$
+
 where $\omega = \frac{d \theta}{dt}$ is the **angular velocity**, which is **the rate of change of angular displacement** (the angle). (More in this, especially the vector form of it, will be shown later)
 
 Similarly, 
@@ -123,7 +151,9 @@ To solve the last term, we can use the aid of Caresian Coordinate again
 ```
 
 Therefore,
+
 $$
 \Rightarrow \vec a ~=~ \left(\frac{d^2 r}{dt^2} - r \omega^2 \right) \hat{e_r} + \left(r \alpha + 2 \frac{dr}{dt} \omega \right) \hat{e_\theta} \\
 $$
+
 where $\alpha = \frac{d\omega}{dt}$ is the **angular acceleration**, which is **the rate of change of angular velocity**.

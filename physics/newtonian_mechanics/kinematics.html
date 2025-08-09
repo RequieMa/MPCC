@@ -189,6 +189,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../newtonian_mechanics.html">Newtonian Mechanics</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../em.html">Electricity &amp; Magnetism</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
 <ul class="nav bd-sidenav">
@@ -426,33 +428,40 @@ document.write(`
 </pre></div>
 </div>
 <p>The other one is position. Unlike time, in Physics, we use the idea of position all the time, and we do define it. However, the discussion of position implicitly depends on the “origin” we set. Therefore, you can point out a location in space. However, to write down the actual mathematical descirption of this point, i.e. a specific coordinate, you need to define a <strong>coordinate system</strong>, like a Cartesian coordinate, beforehind. Therefore, in Physics, we are more keen to use <strong>displacement</strong> instead, which is the relative position. It can relative to an origin or another object. Physical phenomena will not be affected by it, only the equations will.</p>
-<p>Given an origin, <span class="math notranslate nohighlight">\(O\)</span>, and some basis vectors (for Physics, normally in 3D) such that any position of objects, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can be written as
-$<span class="math notranslate nohighlight">\(
-\vec O ~=~ \begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\\
-\vec {OA} ~=~ \begin{pmatrix}a_i \\ a_j \\ a_k\end{pmatrix}\\
-\vec {OB} ~=~ \begin{pmatrix}b_i \\ b_j \\ b_k\end{pmatrix}
-\)</span>$</p>
-<p>The relative position or <strong>displacement</strong> in Physics is hence defined as
-$<span class="math notranslate nohighlight">\(
-\vec {AB} ~=~ \vec {OB} - \vec {OA} ~=~ \begin{pmatrix}b_i - a_i \\ b_j - a_j \\ b_k - a_k\end{pmatrix}\\
-\)</span><span class="math notranslate nohighlight">\(
-normally written as \)</span>\vec r<span class="math notranslate nohighlight">\( and is a function of time \)</span>\vec r = \vec r(t)$</p>
-<p>For convinence, the two form of vector notation is interchangeable in Physics
-$<span class="math notranslate nohighlight">\(
-\vec r ~=~ \begin{pmatrix}x \\ y \\ z\end{pmatrix} = x \hat i + y \hat j + z \hat k
-\)</span>$
-The only difference is that the second one explicitly writes down the basis vector so that you know what kind of coordinate system we are using, the first one does not so it can be on other types of coordinate systems like a spherical polar coorinates. Without explicitly specifying, we assume the first one is using a Cartesian coordinate.</p>
+<p>Given an origin, <span class="math notranslate nohighlight">\(O\)</span>, and some basis vectors (for Physics, normally in 3D) such that any position of objects, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec O ~ &amp;=&amp; ~ \begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\\
+    \vec {OA} ~ &amp;=&amp; ~ \begin{pmatrix}a_i \\ a_j \\ a_k\end{pmatrix}\\
+    \vec {OB} ~ &amp;=&amp; ~ \begin{pmatrix}b_i \\ b_j \\ b_k\end{pmatrix}\\
+\end{eqnarray*}\end{split}\]</div>
+<p>The relative position or <strong>displacement</strong> in Physics is hence defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec {AB} ~ &amp;=&amp; ~ \vec {OB} - \vec {OA}\\
+    \, ~ &amp;=&amp; ~ \begin{pmatrix}b_i - a_i \\ b_j - a_j \\ b_k - a_k\end{pmatrix}\\
+\end{eqnarray*}\end{split}\]</div>
+<p>normally written as <span class="math notranslate nohighlight">\(\vec r\)</span> and is a function of time <span class="math notranslate nohighlight">\(\vec r = \vec r(t)\)</span></p>
+<p>For convinence, the two form of vector notation is interchangeable in Physics</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec r ~ &amp;=&amp; ~ \begin{pmatrix}x \\ y \\ z\end{pmatrix}\\
+    \, ~ &amp;=&amp; ~ x \hat i + y \hat j + z \hat k\\
+\end{eqnarray*}\end{split}\]</div>
+<p>The only difference is that the second one explicitly writes down the basis vector so that you know what kind of coordinate system we are using, the first one does not so it can be on other types of coordinate systems like a spherical polar coorinates. Without explicitly specifying, we assume the first one is using a Cartesian coordinate.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="definitions-of-velocity-and-acceleration">
 <h1>Definitions of Velocity and Acceleration<a class="headerlink" href="#definitions-of-velocity-and-acceleration" title="Link to this heading">#</a></h1>
-<p><strong>Velocity</strong> of a particle is <strong>the rate of change of displacement</strong>
-$<span class="math notranslate nohighlight">\(
-\vec v ~=~ \frac{d \vec r}{dt}\\
-\)</span>$</p>
-<p><strong>Acceleration</strong> of a particle is <strong>the rate of change of velocity</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Velocity</strong> of a particle is <strong>the rate of change of displacement</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\vec v ~=~ \frac{d \vec r}{dt}
+\]</div>
+<p><strong>Acceleration</strong> of a particle is <strong>the rate of change of velocity</strong></p>
+<div class="math notranslate nohighlight">
+\[
 \vec a ~=~ \frac{d \vec v}{dt} = \frac{d^2 \vec r}{dt^2}
-\)</span>$</p>
+\]</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="velocity-and-acceleration-on-2d-coordinate-systems">
 <h1>Velocity and Acceleration on 2D Coordinate Systems<a class="headerlink" href="#velocity-and-acceleration-on-2d-coordinate-systems" title="Link to this heading">#</a></h1>
@@ -464,47 +473,55 @@ $<span class="math notranslate nohighlight">\(
 <section id="in-caresian-coordinate">
 <h2>In Caresian Coordinate<a class="headerlink" href="#in-caresian-coordinate" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec r ~ &amp;=&amp; ~ x \hat i + y \hat j\\
+    \Rightarrow \vec v ~ &amp;=&amp; ~ \frac{d \vec r}{dt}\\
+    \, ~ &amp;=&amp; ~ \frac{d}{dt}\left(x \hat i \right) + \frac{d}{dt}\left(y \hat j \right)\\
+\end{eqnarray*}\end{split}\]</div>
+<p>Using product rule, we have</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}
-\vec r ~=~ x \hat i + y \hat j\\
-\Rightarrow \vec v ~=~ \frac{d \vec r}{dt} ~=~ \frac{d}{dt}\left(x \hat i \right) + \frac{d}{dt}\left(y \hat j \right)\\
-\end{split}\]</div>
-<p>Using product rule, we have
-$<span class="math notranslate nohighlight">\(
 \Rightarrow \vec v ~=~ \frac{d x}{dt}\hat i + x \frac{d \hat i}{dt} + \frac{d y}{dt}\hat j + y \frac{d \hat j}{dt}\\
-\)</span>$</p>
-<p>Based on the geometry, we know that the direction of <span class="math notranslate nohighlight">\(\hat i\)</span> and <span class="math notranslate nohighlight">\(\hat j\)</span> does not change over time, hence the rate of change is zero.
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Based on the geometry, we know that the direction of <span class="math notranslate nohighlight">\(\hat i\)</span> and <span class="math notranslate nohighlight">\(\hat j\)</span> does not change over time, hence the rate of change is zero.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \Rightarrow \vec v ~=~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
-\)</span>$</p>
-<p>Similarly,
-$<span class="math notranslate nohighlight">\(
-\vec v ~=~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
-\Rightarrow \vec a ~=~ \frac{d \vec v}{dt} ~=~ \frac{d^2 x}{dt^2}\hat i + \frac{d^2 y}{dt^2}\hat j\\
-\)</span>$</p>
+\end{split}\]</div>
+<p>Similarly,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec v ~ &amp;=&amp; ~ \frac{d x}{dt}\hat i + \frac{d y}{dt}\hat j\\
+    \Rightarrow \vec a ~ &amp;=&amp; ~ \frac{d \vec v}{dt}\\
+    \, ~ &amp;=&amp; ~ \frac{d^2 x}{dt^2}\hat i + \frac{d^2 y}{dt^2}\hat j\\
+\end{eqnarray*}\end{split}\]</div>
 </section>
 <section id="in-polar-coordinate">
 <h2>In Polar Coordinate<a class="headerlink" href="#in-polar-coordinate" title="Link to this heading">#</a></h2>
-<p>Taking velocity and acceleration in Cartesian coordinate is trivial. However, in Polar coordinate, we have to be careful of the changing direction.
-$<span class="math notranslate nohighlight">\(
+<p>Taking velocity and acceleration in Cartesian coordinate is trivial. However, in Polar coordinate, we have to be careful of the changing direction.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \vec r ~=~ r \hat{e_r}\\
-\)</span><span class="math notranslate nohighlight">\(
-Here, \)</span>\hat{e_r}<span class="math notranslate nohighlight">\( is the radial direction and it is a function of angle, i.e. \)</span>\hat{e_r} = \hat{e_r}(\theta)$.
-Then,</p>
+\end{split}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\hat{e_r}\)</span> is the radial direction and it is a function of angle, i.e. <span class="math notranslate nohighlight">\(\hat{e_r} = \hat{e_r}(\theta)\)</span>.</p>
+<p>Then,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
     \Rightarrow \vec v ~ &amp;=&amp; ~ \frac{d \vec r}{dt}\\
     \, ~ &amp;=&amp; ~ \frac{d}{dt}\left(r \hat{e_r} \right)\\
     \, ~ &amp;=&amp; ~  \frac{dr}{dt} \hat{e_r} + r \frac{d \hat{e_r}(\theta)}{dt}\\
 \end{eqnarray*}\end{split}\]</div>
-<p>For the second term, we need to apply chain rule
-$<span class="math notranslate nohighlight">\(
+<p>For the second term, we need to apply chain rule</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \Rightarrow \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \frac{d \hat{e_r}(\theta)}{d \theta} \frac{d \theta}{dt}\\
-\)</span><span class="math notranslate nohighlight">\(
-To get an idea of what \)</span>\frac{d \hat{e_r}(\theta)}{d \theta}<span class="math notranslate nohighlight">\( is, we can first consider the relation between Polar and Caresian Coordinate. 
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>To get an idea of what <span class="math notranslate nohighlight">\(\frac{d \hat{e_r}(\theta)}{d \theta}\)</span> is, we can first consider the relation between Polar and Caresian Coordinate.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \hat{e_r}(\theta) = \cos(\theta) \hat i + \sin(\theta) \hat j\\
-\)</span><span class="math notranslate nohighlight">\(
-Obviously, \)</span>\hat i<span class="math notranslate nohighlight">\( and \)</span>\hat j<span class="math notranslate nohighlight">\( are not dependent on \)</span>\theta$, thus,</p>
+\end{split}\]</div>
+<p>Obviously, <span class="math notranslate nohighlight">\(\hat i\)</span> and <span class="math notranslate nohighlight">\(\hat j\)</span> are not dependent on <span class="math notranslate nohighlight">\(\theta\)</span>, thus,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
     \Rightarrow \frac{d \hat{e_r}(\theta)}{d \theta} ~ &amp;=&amp; ~ \frac{d}{d \theta}\left(\cos(\theta) \right)\hat i + \frac{d}{d \theta}\left(\sin(\theta) \right)\hat j\\
@@ -512,11 +529,12 @@ Obviously, \)</span>\hat i<span class="math notranslate nohighlight">\( and \)</
     \, ~ &amp;=&amp; ~ \hat{e_\theta}\\
 \end{eqnarray*}\end{split}\]</div>
 <p>It is clear that it satisfies the orthogonality of basis vector such that <span class="math notranslate nohighlight">\(\hat{e_r} \cdot \hat{e_\theta} = 0\)</span></p>
-<p>Therefore,
-$<span class="math notranslate nohighlight">\(
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
 \vec v ~=~ \frac{dr}{dt} \hat{e_r} + r \omega \hat{e_\theta}
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>\omega = \frac{d \theta}{dt}$ is the <strong>angular velocity</strong>, which is <strong>the rate of change of angular displacement</strong> (the angle). (More in this, especially the vector form of it, will be shown later)</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega = \frac{d \theta}{dt}\)</span> is the <strong>angular velocity</strong>, which is <strong>the rate of change of angular displacement</strong> (the angle). (More in this, especially the vector form of it, will be shown later)</p>
 <p>Similarly,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray*}
@@ -532,11 +550,12 @@ where \)</span>\omega = \frac{d \theta}{dt}$ is the <strong>angular velocity</st
     \, ~ &amp;=&amp; ~ -\cos(\theta)\hat i - \sin(\theta)\hat j\\
     \, ~ &amp;=&amp; ~ -\hat{e_r}\\
 \end{eqnarray*}\end{split}\]</div>
-<p>Therefore,
-$<span class="math notranslate nohighlight">\(
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \Rightarrow \vec a ~=~ \left(\frac{d^2 r}{dt^2} - r \omega^2 \right) \hat{e_r} + \left(r \alpha + 2 \frac{dr}{dt} \omega \right) \hat{e_\theta} \\
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>\alpha = \frac{d\omega}{dt}$ is the <strong>angular acceleration</strong>, which is <strong>the rate of change of angular velocity</strong>.</p>
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha = \frac{d\omega}{dt}\)</span> is the <strong>angular acceleration</strong>, which is <strong>the rate of change of angular velocity</strong>.</p>
 </section>
 </section>
 
