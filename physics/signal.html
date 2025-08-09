@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Control Theory Learning Path &#8212; MPCC</title>
+    <title>Signals and Systems &#8212; MPCC</title>
   
   
   
@@ -57,11 +57,9 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'cybernetics/chap1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/signal';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markdown Files" href="../markdown.html" />
-    <link rel="prev" title="Placeholder" href="../cs/chap1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -185,7 +185,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../physics/newtonian_mechanics.html">Newtonian Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newtonian_mechanics.html">Newtonian Mechanics</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
@@ -193,8 +193,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../cs/chap1.html">Placeholder</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cybernetics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Control Theory Learning Path</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cybernetics/chap1.html">Control Theory Learning Path</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Original jupyterbook for reference</span></p>
 <ul class="nav bd-sidenav">
@@ -273,7 +273,7 @@
       
       
       
-      <li><a href="https://github.com/RequieMa/MPCC/tree/Master/issues/new?title=Issue%20on%20page%20%2Fcybernetics/chap1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/RequieMa/MPCC/tree/Master/issues/new?title=Issue%20on%20page%20%2Fphysics/signal.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +303,7 @@
       
       
       
-      <li><a href="../_sources/cybernetics/chap1.md" target="_blank"
+      <li><a href="../_sources/physics/signal.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +387,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Control Theory Learning Path</h1>
+    <h1>Signals and Systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,21 +397,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maths">Maths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-4">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-5">Level 5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Signals and Systems</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-systems-and-inference">Signals, Systems and Inference</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-systems-in-time-frequency">Signals &amp; Systems in Time &amp; Frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-spaces-models">State-Spaces Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-solutions-of-lti-systems-reachability-and-obervability-transfer-functions-hidden-modes">Modal Solutions of LTI Systems, Reachability and Obervability, Transfer Functions, Hidden Modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observers-state-feedback-observer-based-feedback">Observers, State Feedback, Observer-Based Feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probablistic-models-random-variables">Probablistic Models, Random Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mmse-and-lmmse-estimation">MMSE and LMMSE Estimation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wss-processes">WSS Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiener-filtering">Wiener Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-detection">Signal Detection</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics">Physics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-6">Level 6</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-processing">Signal Processing</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs">CS</a></li>
-</ul>
+
             </nav>
         </div>
     </div>
@@ -422,69 +424,159 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="control-theory-learning-path">
-<h1>Control Theory Learning Path<a class="headerlink" href="#control-theory-learning-path" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.reddit.com/r/ControlTheory/comments/ajx4id/if_you_could_create_the_master_guide_to_learning/">reference</a></p>
-<section id="maths">
-<h2>Maths<a class="headerlink" href="#maths" title="Link to this heading">#</a></h2>
-<section id="level-2">
-<h3>Level 2<a class="headerlink" href="#level-2" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="signals-and-systems">
+<h1>Signals and Systems<a class="headerlink" href="#signals-and-systems" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/calendar/">reference</a></p>
+<p><a class="reference external" href="https://materias.df.uba.ar/l5a2021c1/files/2021/05/Alan-V.-Oppenheim-Alan-S.-Willsky-with-S.-Hamid-Signals-and-Systems-Prentice-Hall-1996.pdf">Book</a></p>
 <ol class="arabic simple">
-<li><p>Linear Algebra</p></li>
-<li><p>Differential Equations</p></li>
+<li><p>Signals and Systems</p></li>
+<li><p>Discrete-time systems</p></li>
+<li><p>Feedback, poles, and fundamental modes</p></li>
+<li><p>Continuous-time systems</p></li>
+<li><p>Z Transform</p></li>
+<li><p>Laplace Transform</p></li>
+<li><p>Discrete approximation of continuous-time systems</p></li>
+<li><p>Convolution</p></li>
+<li><p>Frequency Response</p></li>
+<li><p>Feedback and Control</p></li>
+<li><p>Continuous-time frequency response and Bode Plots</p></li>
+<li><p>Continuous-time feedback and control</p></li>
+<li><p>Fourier Representations</p></li>
+<li><p>Fourier Series</p></li>
+<li><p>Fourier Transform</p></li>
+<li><p>Discrete-time Frequency Representations</p></li>
+<li><p>Discrete-time Fourier Representations</p></li>
+<li><p>Relations among Fourier Representations</p></li>
+<li><p>Sampling</p></li>
+<li><p>Quantization</p></li>
+<li><p>Modulation</p></li>
+<li><p>Audio CD</p></li>
 </ol>
 </section>
-<section id="level-3">
-<h3>Level 3<a class="headerlink" href="#level-3" title="Link to this heading">#</a></h3>
+<section class="tex2jax_ignore mathjax_ignore" id="signals-systems-and-inference">
+<h1>Signals, Systems and Inference<a class="headerlink" href="#signals-systems-and-inference" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/pages/calendar/">reference</a></p>
+<section id="signals-systems-in-time-frequency">
+<h2>Signals &amp; Systems in Time &amp; Frequency<a class="headerlink" href="#signals-systems-in-time-frequency" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Transforms</p></li>
+<li><p>Energy Spectral Density</p></li>
+</ol>
+</section>
+<section id="state-spaces-models">
+<h2>State-Spaces Models<a class="headerlink" href="#state-spaces-models" title="Link to this heading">#</a></h2>
 <ol class="arabic simple" start="3">
-<li><p>Multivariable Calculus</p></li>
+<li><p>State-Space Models</p></li>
+<li><p>Equilibrium, Linearization</p></li>
 </ol>
 </section>
-<section id="level-4">
-<h3>Level 4<a class="headerlink" href="#level-4" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="4">
-<li><p>Statistics</p></li>
-<li><p>Signal Processing</p></li>
-</ol>
-</section>
-<section id="level-5">
-<h3>Level 5<a class="headerlink" href="#level-5" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="6">
-<li><p>Complex Variable</p></li>
-</ol>
-</section>
-</section>
-<section id="physics">
-<h2>Physics<a class="headerlink" href="#physics" title="Link to this heading">#</a></h2>
-<section id="id1">
-<h3>Level 2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Mechanics</p></li>
-<li><p>E &amp; M</p></li>
-<li><p>Waves &amp; Vibration</p></li>
-</ol>
-</section>
-<section id="id2">
-<h3>Level 4<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="4">
-<li><p>Control</p></li>
-</ol>
-</section>
-<section id="level-6">
-<h3>Level 6<a class="headerlink" href="#level-6" title="Link to this heading">#</a></h3>
+<section id="modal-solutions-of-lti-systems-reachability-and-obervability-transfer-functions-hidden-modes">
+<h2>Modal Solutions of LTI Systems, Reachability and Obervability, Transfer Functions, Hidden Modes<a class="headerlink" href="#modal-solutions-of-lti-systems-reachability-and-obervability-transfer-functions-hidden-modes" title="Link to this heading">#</a></h2>
 <ol class="arabic simple" start="5">
-<li><p>Nonlinear Dynamics</p></li>
-<li><p>Nonlinear Control</p></li>
+<li><p>Model Solution of undriven CT and DT LTI State-space models</p></li>
+<li><p>Full modal solution, Asymptotic stability, Reachability and Observability</p></li>
+<li><p>Matrix Exponential, ZIR+ZSR, Transfer Function, Hidden modes, Reaching target states</p></li>
+</ol>
+</section>
+<section id="observers-state-feedback-observer-based-feedback">
+<h2>Observers, State Feedback, Observer-Based Feedback<a class="headerlink" href="#observers-state-feedback-observer-based-feedback" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="8">
+<li><p>Observers for State Estimation</p></li>
+<li><p>Observers, State Feedback</p></li>
+<li><p>Observer-Based Feedback</p></li>
+</ol>
+</section>
+<section id="probablistic-models-random-variables">
+<h2>Probablistic Models, Random Variables<a class="headerlink" href="#probablistic-models-random-variables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="11">
+<li><p>Probabilistic Models, Random Variables</p></li>
+</ol>
+</section>
+<section id="mmse-and-lmmse-estimation">
+<h2>MMSE and LMMSE Estimation<a class="headerlink" href="#mmse-and-lmmse-estimation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="12">
+<li><p>Vector Picture for 1st- and 2nd-order Statistics; MMSE Estimation</p></li>
+<li><p>LMMSE Estimation, Orthogonality</p></li>
+<li><p>Normal Equations, Random Processes</p></li>
+</ol>
+</section>
+<section id="wss-processes">
+<h2>WSS Processes<a class="headerlink" href="#wss-processes" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="15">
+<li><p>Wide-sense Stationary Processes</p></li>
+<li><p>LTI Filtering of WSS Processes</p></li>
+<li><p>Power Spectral Density (PSD)</p></li>
+</ol>
+</section>
+<section id="wiener-filtering">
+<h2>Wiener Filtering<a class="headerlink" href="#wiener-filtering" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="18">
+<li><p>Einstein-Wiener-Khinchin Theorem, PSD Applications, Modeling Filters</p></li>
+<li><p>Wiener Filtering, and illustrations</p></li>
+</ol>
+</section>
+<section id="hypothesis-testing">
+<h2>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="20">
+<li><p>Hypothesis Testing</p></li>
+</ol>
+</section>
+<section id="signal-detection">
+<h2>Signal Detection<a class="headerlink" href="#signal-detection" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="21">
+<li><p>Neyman-Pearson Testing, Signal Detection</p></li>
+<li><p>Matched Filtering</p></li>
 </ol>
 </section>
 </section>
-<section id="cs">
-<h2>CS<a class="headerlink" href="#cs" title="Link to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="signal-processing">
+<h1>Signal Processing<a class="headerlink" href="#signal-processing" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/pages/lecture-notes/">reference</a></p>
 <ol class="arabic simple">
-<li><p>Program</p></li>
-<li><p>Simulation</p></li>
+<li><p>poles and zeors of filter classes</p></li>
+<li><p>The decibel</p></li>
+<li><p>Low-pass filter design</p></li>
+<li><p>Butterworth filter design</p></li>
+<li><p>Chebyshev Filters</p></li>
+<li><p>2nd-order filter sections</p></li>
+<li><p>Transformation of low-pass filters to other classes</p></li>
+<li><p>State-variable active filters</p></li>
+<li><p>Op-amp based state-variable filters</p></li>
+<li><p>DT signal processing</p></li>
+<li><p>Sampling Theorem</p></li>
+<li><p>DFT</p></li>
+<li><p>FFT</p></li>
+<li><p>Spectral Leakage in the DFT and apodizing (windowing) functions</p></li>
+<li><p>Time-domain digital signal processing</p></li>
+<li><p>The discrete-time convolution sum</p></li>
+<li><p>Z-transform</p></li>
+<li><p>Disccrete-time transfer function</p></li>
+<li><p>The transfer function and the difference equation</p></li>
+<li><p>Intro to z-plane stability criteria</p></li>
+<li><p>The frequency response of DT systems</p></li>
+<li><p>The inverse z-Transform</p></li>
+<li><p>Finite impulse response (FIR) low-pass filter design</p></li>
+<li><p>FIR low-pass filter desing by windowing</p></li>
+<li><p>Window FIR filters or other filter types</p></li>
+<li><p>The zeros of a linear phase FIR Filter</p></li>
+<li><p>Frequency-sampling filters</p></li>
+<li><p>FIR filter design using optimization</p></li>
+<li><p>FFT convolution for FIR filters</p></li>
+<li><p>The design of IIR filters</p></li>
+<li><p>Direct-form filter structures</p></li>
+<li><p>Transversal FIR structure</p></li>
+<li><p>IIR direct form structures</p></li>
+<li><p>Transposed direct forms</p></li>
+<li><p>Coefficient sensitivity in direct form filters</p></li>
+<li><p>Interpolation and decimation</p></li>
+<li><p>Introduction to random signals</p></li>
+<li><p>The correlation function</p></li>
+<li><p>Linear system input/output relationships with random inputs</p></li>
+<li><p>DT correlation</p></li>
+<li><p>Non-parametric power spectral density estimation</p></li>
+<li><p>Least-squares filter design</p></li>
+<li><p>Adaptive filtering</p></li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -500,7 +592,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./cybernetics"
+            path: "./physics"
         },
         predefinedOutput: true
     }
@@ -517,24 +609,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../cs/chap1.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Placeholder</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../markdown.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -551,21 +625,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maths">Maths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-4">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-5">Level 5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Signals and Systems</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-systems-and-inference">Signals, Systems and Inference</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-systems-in-time-frequency">Signals &amp; Systems in Time &amp; Frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-spaces-models">State-Spaces Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-solutions-of-lti-systems-reachability-and-obervability-transfer-functions-hidden-modes">Modal Solutions of LTI Systems, Reachability and Obervability, Transfer Functions, Hidden Modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observers-state-feedback-observer-based-feedback">Observers, State Feedback, Observer-Based Feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probablistic-models-random-variables">Probablistic Models, Random Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mmse-and-lmmse-estimation">MMSE and LMMSE Estimation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wss-processes">WSS Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiener-filtering">Wiener Filtering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-detection">Signal Detection</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics">Physics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-6">Level 6</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-processing">Signal Processing</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs">CS</a></li>
-</ul>
+
   </nav></div>
 
 </div></div>

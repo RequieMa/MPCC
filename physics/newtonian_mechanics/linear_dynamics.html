@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Control Theory Learning Path &#8212; MPCC</title>
+    <title>Linear Dynamics &#8212; MPCC</title>
   
   
   
@@ -18,50 +18,51 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'cybernetics/chap1';</script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markdown Files" href="../markdown.html" />
-    <link rel="prev" title="Placeholder" href="../cs/chap1.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/newtonian_mechanics/linear_dynamics';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Kinematics" href="kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -93,7 +94,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="../../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -142,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../../intro.html">
   
   
   
@@ -153,8 +154,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="MPCC - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="MPCC - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MPCC - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MPCC - Home"/>`);</script>
   
   
 </a></div>
@@ -174,34 +175,34 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="../../intro.html">
                     Welcome to MPCC
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../maths/chap1.html">Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maths/chap1.html">Placeholder</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../physics/newtonian_mechanics.html">Newtonian Mechanics</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../newtonian_mechanics.html">Newtonian Mechanics</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../cs/chap1.html">Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cs/chap1.html">Placeholder</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Cybernetics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Control Theory Learning Path</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cybernetics/chap1.html">Control Theory Learning Path</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Original jupyterbook for reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mymarkdownfile.html">Here’s my sample title</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mymarkdownfile.html">Here’s my sample title</a></li>
 </ul>
 
     </div>
@@ -273,7 +274,7 @@
       
       
       
-      <li><a href="https://github.com/RequieMa/MPCC/tree/Master/issues/new?title=Issue%20on%20page%20%2Fcybernetics/chap1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/RequieMa/MPCC/tree/Master/issues/new?title=Issue%20on%20page%20%2Fphysics/newtonian_mechanics/linear_dynamics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +304,7 @@
       
       
       
-      <li><a href="../_sources/cybernetics/chap1.md" target="_blank"
+      <li><a href="../../_sources/physics/newtonian_mechanics/linear_dynamics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +388,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Control Theory Learning Path</h1>
+    <h1>Linear Dynamics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,21 +398,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maths">Maths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-4">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-5">Level 5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear Dynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-linear-momentum">Conservation of Linear Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-3nd-law-from-1st-and-2nd">Newton 3nd Law from 1st and 2nd</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics">Physics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-6">Level 6</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs">CS</a></li>
-</ul>
+
             </nav>
         </div>
     </div>
@@ -422,68 +417,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="control-theory-learning-path">
-<h1>Control Theory Learning Path<a class="headerlink" href="#control-theory-learning-path" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.reddit.com/r/ControlTheory/comments/ajx4id/if_you_could_create_the_master_guide_to_learning/">reference</a></p>
-<section id="maths">
-<h2>Maths<a class="headerlink" href="#maths" title="Link to this heading">#</a></h2>
-<section id="level-2">
-<h3>Level 2<a class="headerlink" href="#level-2" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-dynamics">
+<h1>Linear Dynamics<a class="headerlink" href="#linear-dynamics" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="newton-s-three-laws">
+<h1>Newton’s Three Laws<a class="headerlink" href="#newton-s-three-laws" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Linear Algebra</p></li>
-<li><p>Differential Equations</p></li>
+<li><p>A particle remains at rest or moves in a straight line with constant speed if there is no resultant force acting on it.</p></li>
+<li><p>Resultant force is the rate of change of momentum
+$<span class="math notranslate nohighlight">\(
+\vec F ~=~ \frac{d \vec p}{dt}\\
+\)</span>$</p></li>
+<li><p>For any action, there is a reaction (equal in magnitude, opposite in direction, and collinear)</p></li>
 </ol>
+<p>Our current form of Newton second law was written by Euler.</p>
+<p>They are <strong>laws</strong> because they have been tested. Also, they cannot be <strong>proved</strong>, yet can be <strong>disproved</strong> using experiment. (The fact that we say “they have been tested” is that “they have not been disproved successfully” under our normal life scales)</p>
+<p>Mass, <span class="math notranslate nohighlight">\(m\)</span>, is described as a <strong>physical property</strong> which reflects the ability to resist changing in velocity, known as <strong>inertial mass</strong>.</p>
+<p>There is an implicit condition of Newton’s laws: They have to be applied under an <strong>inertial reference of frame</strong> (i.e. not a frame under acceleration or rotation). Otherwise, we will measure acceleration even if there is no external force. (e.g. Coriolis Effect)</p>
+<p>Absolute inertial frame where Neton 1st law holds is an idealized situation.</p>
+<section id="linear-momentum">
+<h2>Linear Momentum<a class="headerlink" href="#linear-momentum" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\vec p\)</span> is the linear momentum,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \vec{p} ~=~ m \vec{v}\\
+\end{split}\]</div>
+<p>According to Newton 2nd law, momentum can be considered as a physical quantity for dynamic status.</p>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec{F} ~ &amp;=&amp; ~ \frac{d \vec{p}}{dt}\\
+    \, ~ &amp;=&amp; ~  \frac{d (m \vec{v})}{dt}\\
+    \, ~ &amp;=&amp; ~  m \frac{d \vec{v}}{dt} + \frac{d m}{dt} \vec{v}\\
+\end{eqnarray*}\end{split}\]</div>
+<p>if an object does not change its mass while force is applying on it, i.e. <span class="math notranslate nohighlight">\(\frac{dm}{dt} = 0\)</span>, then we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec F ~=~ m \vec a\\
+\end{split}\]</div>
 </section>
-<section id="level-3">
-<h3>Level 3<a class="headerlink" href="#level-3" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="3">
-<li><p>Multivariable Calculus</p></li>
-</ol>
+<section id="conservation-of-linear-momentum">
+<h2>Conservation of Linear Momentum<a class="headerlink" href="#conservation-of-linear-momentum" title="Link to this heading">#</a></h2>
+<p>In a <strong>closed system</strong>, the total momentum is conserved.</p>
+<p>By closed system, we refer as the system of objects do not interact with external environment. (No external forces exerts on the system of objects).</p>
+<p>Consider <span class="math notranslate nohighlight">\(N\)</span> particles in a system, the total momentum is refered as <span class="math notranslate nohighlight">\(\sum_k^N \vec p_k\)</span>, where <span class="math notranslate nohighlight">\(\vec p_k\)</span> refers as the momentum of a single particle.</p>
+<p>Then the conservation of linear momentum can be written as
+$<span class="math notranslate nohighlight">\(
+\sum_k^N (\vec p_k)_i ~=~ \sum_k^N (\vec p_k)_f
+\)</span><span class="math notranslate nohighlight">\(
+where \)</span>(\vec p_k)_i<span class="math notranslate nohighlight">\( and \)</span>(\vec p_k)_f$ denote the initial and final linear momentum of the particle repectively.</p>
 </section>
-<section id="level-4">
-<h3>Level 4<a class="headerlink" href="#level-4" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="4">
-<li><p>Statistics</p></li>
-<li><p>Signal Processing</p></li>
-</ol>
-</section>
-<section id="level-5">
-<h3>Level 5<a class="headerlink" href="#level-5" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="6">
-<li><p>Complex Variable</p></li>
-</ol>
-</section>
-</section>
-<section id="physics">
-<h2>Physics<a class="headerlink" href="#physics" title="Link to this heading">#</a></h2>
-<section id="id1">
-<h3>Level 2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Mechanics</p></li>
-<li><p>E &amp; M</p></li>
-<li><p>Waves &amp; Vibration</p></li>
-</ol>
-</section>
-<section id="id2">
-<h3>Level 4<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="4">
-<li><p>Control</p></li>
-</ol>
-</section>
-<section id="level-6">
-<h3>Level 6<a class="headerlink" href="#level-6" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="5">
-<li><p>Nonlinear Dynamics</p></li>
-<li><p>Nonlinear Control</p></li>
-</ol>
-</section>
-</section>
-<section id="cs">
-<h2>CS<a class="headerlink" href="#cs" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Program</p></li>
-<li><p>Simulation</p></li>
-</ol>
+<section id="newton-3nd-law-from-1st-and-2nd">
+<h2>Newton 3nd Law from 1st and 2nd<a class="headerlink" href="#newton-3nd-law-from-1st-and-2nd" title="Link to this heading">#</a></h2>
+<p>..</p>
 </section>
 </section>
 
@@ -500,7 +486,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./cybernetics"
+            path: "./physics\newtonian_mechanics"
         },
         predefinedOutput: true
     }
@@ -518,22 +504,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../cs/chap1.html"
+       href="kinematics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Placeholder</p>
+        <p class="prev-next-title">Kinematics</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../markdown.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -551,21 +528,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maths">Maths</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-2">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-3">Level 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-4">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-5">Level 5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear Dynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-three-laws">Newton’s Three Laws</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">Linear Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-linear-momentum">Conservation of Linear Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-3nd-law-from-1st-and-2nd">Newton 3nd Law from 1st and 2nd</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics">Physics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Level 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Level 4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#level-6">Level 6</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cs">CS</a></li>
-</ul>
+
   </nav></div>
 
 </div></div>
@@ -613,8 +584,8 @@ By Zengou Ma
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

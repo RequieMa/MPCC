@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dirac Notation &#8212; MPCC</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/quantum/dirac_notation';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="MPCC - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="MPCC - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to MPCC
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../maths/chap1.html">Placeholder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../newtonian_mechanics.html">Newtonian Mechanics</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cs/chap1.html">Placeholder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cybernetics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../cybernetics/chap1.html">Control Theory Learning Path</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Original jupyterbook for reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mymarkdownfile.html">Here’s my sample title</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/RequieMa/MPCC/tree/Master" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/RequieMa/MPCC/tree/Master/issues/new?title=Issue%20on%20page%20%2Fphysics/quantum/dirac_notation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/quantum/dirac_notation.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dirac Notation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-with-ordinary-vectors">Compare with Ordinary Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product">Inner Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-product">Outer Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origin">Origin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form">Integral Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dirac-notation">
+<h1>Dirac Notation<a class="headerlink" href="#dirac-notation" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.physics.umd.edu/courses/Phys374/fall05/files/DiracNotation.pdf">reference</a></p>
+<p>The Dirac notation for states in a linear space is a way of representing a state in a linear space in a way that is free of the choice of coordinate but allows us to insert a particular choice of coordinates easily and to convert from one choice of coordinates to another conveniently.</p>
+<p>Furthermore, it is oriented in a way (bra v.s. ket) that allows us to keep track of whether we need to take comlext conjugates or not. This is particularly useful if we are in an inner-product space. The orientation of the Dirac representation allows us to nicely represent the inner product in a way that keeps careful track of complex conjugation.</p>
+<section id="compare-with-ordinary-vectors">
+<h2>Compare with Ordinary Vectors<a class="headerlink" href="#compare-with-ordinary-vectors" title="Link to this heading">#</a></h2>
+<p>If the basis vectors are orthonormal, then we can obtain each components of a vector by dot product with the relevant basis vectors:
+$<span class="math notranslate nohighlight">\(
+\vec a = (\vec a \cdot \hat i) \hat i + (\vec a \cdot \hat j) \hat j + (\vec a \cdot \hat k) \hat k\\
+\)</span>$</p>
+<p>If you choose a different basis, the components of any given vector will change. However the value of <span class="math notranslate nohighlight">\(\vec a \cdot \vec b\)</span> is independent of the basis.</p>
+<p>In an <span class="math notranslate nohighlight">\(n\)</span>-dimensional ‘Hilbert Space’, we can write any Ket in terms of just <span class="math notranslate nohighlight">\(n\)</span> othere kets, e.g.) in 3 dimensions
+$<span class="math notranslate nohighlight">\(
+\ket{a} = \alpha \ket p + \beta \ket q + \gamma \ket r\\
+\ket{a} = a_x \ket i + a_y \ket j + a_z \ket k\\
+\)</span>$</p>
+<p>The choice of <span class="math notranslate nohighlight">\(\{ \ket p, \ket q, \ket r \}\)</span> is a particular ‘<strong>basis</strong>’, the numbers <span class="math notranslate nohighlight">\(\alpha, \beta, \gamma\)</span> are the ‘<strong>components</strong>’ of <span class="math notranslate nohighlight">\(\ket a\)</span> in this basis (normally called ‘amplitudes’ in QM). If the Hilbert Space has an <strong>infinite number of dimensions</strong>, we get an infinite set of components. Such a set is called a <strong>wavefunction</strong>.</p>
+</section>
+<section id="inner-product">
+<h2>Inner Product<a class="headerlink" href="#inner-product" title="Link to this heading">#</a></h2>
+<p>Let
+$<span class="math notranslate nohighlight">\(
+\vec a =  \left| a \right \rangle\\
+\vec a^{*} =  \left \langle a \right|\\
+\vec a^{*} \cdot \vec a = \braket{a|a}
+\)</span><span class="math notranslate nohighlight">\(
+where
+\)</span><span class="math notranslate nohighlight">\(
+\braket{a|b} = \vec a^{*} \cdot \vec b = \begin{bmatrix} a_1^* &amp; a_2^* \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = a_1^*b_1 + a_2^*b_2
+\)</span>$</p>
+</section>
+<section id="outer-product">
+<h2>Outer Product<a class="headerlink" href="#outer-product" title="Link to this heading">#</a></h2>
+<p>Consider</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+    \vec a (\vec b \cdot \vec c)\\
+    \, =&amp; \mathbf a (\mathbf b^T \mathbf c)\\ 
+    \, =&amp; (\mathbf a \mathbf b^T) \mathbf c\\
+    \, =&amp; (\vec a \otimes \vec b) \vec c\\
+\end{eqnarray*}\end{split}\]</div>
+<p>where
+$<span class="math notranslate nohighlight">\(
+\vec a \otimes \vec b
+\)</span>$
+is called the <strong>outer product</strong> of the vectors.</p>
+<p>It takes a vector in the <span class="math notranslate nohighlight">\(\vec c\)</span> direction and gives back one in the <span class="math notranslate nohighlight">\(\vec a\)</span> direction. (<span class="math notranslate nohighlight">\(\vec b\)</span> serves as a measurement tool such that <span class="math notranslate nohighlight">\(\vec c\)</span> project on)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec a \otimes \vec b = \vec a \cdot \vec b^{*} = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix} \begin{bmatrix} b_1^* &amp; b_2^* \end{bmatrix} = \begin{bmatrix} a_1b_1^* &amp; a_1b_2^* \\ a_2b_1^* &amp; a_2b_2^*\end{bmatrix}
+\end{split}\]</div>
+<p>In general, we can multiply an <span class="math notranslate nohighlight">\((n \times k)\)</span> matrix and a <span class="math notranslate nohighlight">\((k \times m)\)</span> matrix to get an <span class="math notranslate nohighlight">\((n \times m)\)</span> matrix
+$<span class="math notranslate nohighlight">\(
+(\mathbf A \mathbf B)_{ij} = \sum_{l=1}^k A_{il}B_{lj}\\
+\)</span><span class="math notranslate nohighlight">\(
+where \)</span>i = 1…n<span class="math notranslate nohighlight">\(, \)</span>j = 1…m$</p>
+<p>To see what is really going on here, it is useful to see the outer product of two orthonormal basis vectors <span class="math notranslate nohighlight">\(\hat e_i\)</span> and <span class="math notranslate nohighlight">\(\hat e_j\)</span>
+$<span class="math notranslate nohighlight">\(
+(\hat e_i \otimes \hat e_j)\vec v = \hat e_i (\hat e_j \cdot \vec v) = \vec v_j \hat e_i
+\)</span>$</p>
+<p>The matrix that does this job is the one with 1 in the j-th row and i-th column and elsewhere. We can therefore write any matrix as an outer product operator
+$<span class="math notranslate nohighlight">\(
+\mathbf A = \sum_{i, j = 1}^N A_{ij} \hat e_i \otimes \hat e_j
+\)</span>$
+The outer product expansion reveals that the same matrix can be expressed in totally different forms, depending on the basis you choose.</p>
+<p>With Dirac notation
+$<span class="math notranslate nohighlight">\(
+\vec a \otimes \vec b = \ket{a} \bra{b}
+\)</span>$</p>
+<p>Then the previous relation can be expressed as
+$<span class="math notranslate nohighlight">\(
+(\vec a \otimes \vec b) \vec c = \vec a (\vec b \cdot \vec c)\\
+\Rightarrow (\ket{a} \bra{b}) \ket{c} = \ket{a} \braket{b|c}
+\)</span>$</p>
+<p>The rule about the matrices and the outer product produces a pair of useful results
+$<span class="math notranslate nohighlight">\(
+\mathbf A = \sum_{i, j = 1}^N A_{ij} \ket{e_i} \bra{e_j} = \sum_{i, j = 1}^N  \ket{e_i} A_{ij} \bra{e_j}\\
+\mathbf I = \sum_{i, j = 1}^N  \ket{e_i} \delta_{ij} \bra{e_j} = \sum_{i = 1}^N  \ket{e_i} \bra{e_i}\\
+\)</span>$</p>
+</section>
+<section id="origin">
+<h2>Origin<a class="headerlink" href="#origin" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Quantum_Tutorials_%28Rioux%29/01%3A_Quantum_Fundamentals/1.26%3A_Elements_of_Dirac_Notation">reference</a></p>
+<p>Two major mathematical traditions emerged in quantum mechanics: <strong>Heisenberg’s matrix mechanics</strong> and <strong>Schrödinger’s wave mechanics</strong>. These distinctly different computational approaches to quantum theory are formally equivalent, each with its particular strengths in certain applications. Heisenberg’s variation, as its name suggests, is based matrix and vector algebra, while Schrödinger’s approach requires integral and differential calculus. Dirac’s notation can be used in a first step in which the quantum mechanical calculation is described or set up. After this is done, one chooses either matrix or wave mechanics to complete the calculation, depending on which method is computationally the most expedient.</p>
+</section>
+<section id="integral-form">
+<h2>Integral Form<a class="headerlink" href="#integral-form" title="Link to this heading">#</a></h2>
+<p>Consider the linear superposition
+$<span class="math notranslate nohighlight">\(
+\ket{\psi} = \int \ket{x} \braket{x | \psi} dx\\
+\bra{\phi} = \int \braket{\phi | x'} \bra{x'} dx'
+\)</span>$</p>
+<p>Combining these yields,
+$<span class="math notranslate nohighlight">\(
+\braket{\phi | \psi} = \int_x \int_{x'} \braket{\phi | x'} \braket{x'|x} \braket{x | \psi} dx' dx = \int_x \braket{\phi | x} \braket{x | \psi} dx 
+\)</span><span class="math notranslate nohighlight">\(
+The \)</span>x’<span class="math notranslate nohighlight">\( disappears because the position eigenstates are an orthogonal basis set and \)</span>\braket{x’|x} = 0<span class="math notranslate nohighlight">\( unless \)</span>x’ = x$ in which case it equals 1.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>J. L. Martin (see references below) has identified four virtues of Dirac notation.</p>
+<ol class="arabic simple">
+<li><p>It is concise. There are a small number of basic elements to Dirac’s notation: bras, kets, bra-ket pairs, ket-bra products, and the completeness relation (continuous and discreet). With these few building blocks you can construct all of quantum theory.</p></li>
+<li><p>It is flexible. You can use it to say the same thing in several ways; translate with ease from one language to another. Perhaps the insight that the Dirac notation offers to the Fourier transform is the best example of this virtue.</p></li>
+<li><p>It is general. It is a syntax for describing what you want to do without committing yourself to a particular computational approach. In other words, you use it to set up a problem and then choose the most expeditious way to execute the calculation.</p></li>
+<li><p>While it is not exactly the industry standard, it should be for the reasons listed in 1-3 above. It is widely used, so if you want to read the literature in quantum chemistry and physics, you need to learn Dirac notation. In addition most of the best quantum textbooks in chemistry and physics use it.</p></li>
+<li><p>I would like to add a 5th virtue. Once you get the “hang of it” you will find that it is simple to use and very enlightening. It facilitates the understanding of all the fundamental quantum concepts.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\quantum"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-with-ordinary-vectors">Compare with Ordinary Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product">Inner Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-product">Outer Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origin">Origin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form">Integral Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Zengou Ma
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
