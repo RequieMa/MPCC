@@ -14,7 +14,6 @@
    - Linear Momentum
    - Conservation of Linear Momentum
    - Newton 3rd Law From Newton 1st and 2nd Law
-
 3. [Angular Dynamics](./newtonian_mechanics/angular_dynamics)
    - Angular Momentum
    - Torque
