@@ -1,0 +1,37 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Mathematics
+    chapters:
+      - file: maths/chap1
+  - caption: Physics
+    chapters:
+    - file: physics/newtonian_mechanics
+      sections:
+      - file: physics/newtonian_mechanics/kinematics
+      - file: physics/newtonian_mechanics/linear_dynamics
+      - file: physics/newtonian_mechanics/angular_dynamics
+    - file: physics/lagrangian_hamiltonian
+      sections:
+      - file: physics/analytical_mechanics/work_energy
+    - file: physics/em
+      sections:
+      - file: physics/electronics/chap1
+    - file: physics/signal
+      sections:
+      - file: physics/signal/intro
+  - caption: Computer Science
+    chapters:
+      - file: cs/chap1
+  - caption: Cybernetics
+    chapters:
+      - file: cybernetics/chap1
+  - caption: Original jupyterbook for reference
+    chapters:
+    - file: markdown
+    - file: notebooks
+    - file: markdown-notebooks
+    - file: mymarkdownfile
